@@ -99,7 +99,7 @@ button {
 <option value="3">10-15 năm</option>
 </select>
 
-<input type="number" id="hoaHong" value="23" placeholder="% Hoa hồng">
+<input type="number" id="hoaHong" value="10" placeholder="% Hoa hồng">
 
 <button class="btn-primary" onclick="tinh()">TÍNH PHÍ</button>
 <button class="btn-copy" onclick="copy()">COPY</button>
@@ -157,7 +157,6 @@ function tinh(){
     let age = tuoiXe.value;
     let hh = parseFloat(hoaHong.value);
 
-
     if(!v || hh<0 || hh>100){
         alert("Nhập sai!");
         return;
@@ -170,7 +169,7 @@ function tinh(){
     let hhTien = (fee / 1.1) * hh / 100;
     let thuVe = fee - hhTien;
 
-kq = 
+    kq = 
 `Phí bảo hiểm: ${f(fee)} VNĐ
 Hoa hồng: ${f(hhTien)} VNĐ
 Thu về: ${f(thuVe)} VNĐ`;
