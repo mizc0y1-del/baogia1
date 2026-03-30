@@ -145,7 +145,9 @@ function getRange(v){
     return ">800";
 }
 
-function f(n){ return n.toLocaleString('en-US'); }
+function f(n){
+    return Math.round(n).toLocaleString('en-US');
+}
 
 let kq = "";
 
@@ -167,8 +169,10 @@ function tinh(){
     let hhTien = (fee / 1.1) * hh / 100;
     let thuVe = fee - hhTien;
 
-    kq = `Phí BH: ${f(fee)} | Hoa hồng: ${f(hhTien)} | Thu về: ${f(thuVe)} VNĐ`;
-
+kq = 
+`Phí bảo hiểm: ${f(fee)} VNĐ
+Hoa hồng: ${f(hhTien)} VNĐ
+Thu về: ${f(thuVe)} VNĐ`;
     ketqua.innerText = kq;
 
     saveHistory(kq);
