@@ -166,6 +166,10 @@ function tinh(){
     let rate = data[type][range][age];
 
     let fee = v * 1000000 * rate / 100;
+    // Phí tối thiểu cho xe Không KD
+if (type === "khongkd" && fee < 5000000) {
+    fee = 5000000;
+}
     let hhTien = (fee / 1.1) * hh / 100;
     let thuVe = fee - hhTien;
 
